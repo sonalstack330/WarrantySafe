@@ -1,0 +1,25 @@
+   # IDE
+   .idea/
+   *.iml
+   *.iws
+   *.ipr
+
+   # Build
+   target/
+   build/
+   *.class
+
+   # Dependencies
+   .m2/
+   node_modules/
+
+   # Environment
+   .env
+   application-local.properties
+
+   # OS
+   .DS_Store
+   Thumbs.db
+
+   # Spring Boot
+   *.log
