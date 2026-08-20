@@ -1,0 +1,44 @@
+package com.warranty.warranty_tracker.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "user_warranties")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserWarranty {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "warranty_id", nullable = false)
+    private Warranty warranty;
+
+    @Column(name = "added_date", nullable = false, updatable = false)
+    private LocalDateTime addedDate;
+
+    @Column(name = "notes", length = 500)
+    private String notes; // e.g., "Purchased at Best Buy", "AppleCare included"
+
+    @Column(name = "is_claimed")
+    private Boolean isClaimed = false; // Has user claimed warranty yet?
+
+    @Column(name = "claim_date")
+    private LocalDateTime claimDate;
+
+    @PrePersist
+    protected void onCreate() {
+        addedDate = LocalDateTime.now();
+    }
+}
