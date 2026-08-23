@@ -2,7 +2,6 @@ package com.warranty.warranty_tracker.controller;
 
 import com.warranty.warranty_tracker.dto.UserCreateRequest;
 import com.warranty.warranty_tracker.dto.UserResponse;
-import com.warranty.warranty_tracker.entity.User;
 import com.warranty.warranty_tracker.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
