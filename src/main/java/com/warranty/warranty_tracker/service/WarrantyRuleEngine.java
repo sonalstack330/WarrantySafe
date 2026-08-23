@@ -1,7 +1,6 @@
 package com.warranty.warranty_tracker.service;
 import com.warranty.warranty_tracker.dto.WarrantyRuleRequest;
 
-import com.warranty.warranty_tracker.entity.WarrantyRule;
 import com.warranty.warranty_tracker.repository.WarrantyRuleRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

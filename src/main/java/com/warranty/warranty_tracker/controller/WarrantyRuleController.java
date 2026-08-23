@@ -1,6 +1,5 @@
 package com.warranty.warranty_tracker.controller;
 
-import com.warranty.warranty_tracker.entity.WarrantyRule;
 import com.warranty.warranty_tracker.service.WarrantyRuleEngine;
 import com.warranty.warranty_tracker.dto.WarrantyRuleRequest;
 import com.warranty.warranty_tracker.dto.WarrantyRuleResponse;

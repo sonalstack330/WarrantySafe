@@ -18,16 +18,16 @@ public class WarrantyRule {
     private Long id;
 
     @Column(name = "brand", nullable = false)
-    private String brand; // e.g., "Apple", "Samsung", "Dell"
+    private String brand;
 
     @Column(name = "category", nullable = false)
-    private String category; // e.g., "Electronics", "Appliances", "Furniture"
+    private String category;
 
     @Column(name = "warranty_months", nullable = false)
-    private Integer warrantyMonths; // e.g., 12 = 1 year
+    private Integer warrantyMonths;
 
     @Column(name = "warranty_type")
-    private String warrantyType; // e.g., "Manufacturer"
+    private String warrantyType;
 
     @Column(name = "is_active")
     private Boolean isActive = true;
